@@ -8,10 +8,15 @@
 *{
     margin:0;
     padding: 0;
+    color:white;
+}
+
+html{
+     font-size:93.75%; /*15px*/
 }
 
 body{
-    background: #f0f2f5;
+    background: #141617;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -28,22 +33,39 @@ body{
 }
 
 .container {
-    width: min(90vw,800px);
     margin: auto;
+    width: min(90vw,800px);
+
 }
 
 /* titles */
 h2{
+   
+    font-weight: 400;
     margin-top: 3.2rem;
     margin-bottom: 0.8rem;
-    color: var(--darkblue);
+}
 
-    font-weight: 400;
+/* Links and Buttons */
+
+a{
+    color: #49AA26;
+    text-decoration: none;
+}
+
+a::hover{
+ color: #3DD705;
+}
+
+.new{
+    display: inline-block;
+    margin-bottom: .8rem;
+    
 }
 
 /* HEADER */
 header {
-    background:#2D4A22;
+    background: linear-gradient(90deg, rgba(227,6,226,1) 0%, rgba(212,9,233,1) 35%, rgba(231,0,255,1) 100%);;
     padding: 2rem 0 10rem;
     text-align: center;
 }
@@ -67,17 +89,20 @@ header {
 /* Cards */
 
 .card{
-    background-color: white;
-    padding: 1.5rem 2rem;
+    background-color: RGB(26, 27, 29);
     border-radius: .25rem;
+    color: white;
     margin-bottom: 2rem;
-    color: var(--color-darkblue)
+    padding: 1.5rem 2rem;
 
 }
 
 .card h3 {
     font-weight: 400;
     font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .card p {
@@ -87,7 +112,7 @@ header {
 }
 
 .card.total{
-    background:#49AA26;
+    background: linear-gradient(90deg, rgba(7,215,80,1) 0%, rgba(36,233,9,1) 35%, rgba(0,255,94,1) 100%);
     color: white;
 }
 /* Table */
@@ -114,11 +139,10 @@ table tbody tr td:last-child{
 }
 
 table thead th {
-    background: white;
-
+    background: RGB(26, 27, 29);
+    color: white;
     font-weight: normal;
     padding: 1rem 2rem;
-
     text-align: left;
 }
 
@@ -131,7 +155,7 @@ table tbody tr:hover {
 }
 
 table tbody td {
-    background:white;
+    background: #1E1D1C;
     padding: 1rem 2rem;
 }
 
@@ -146,11 +170,49 @@ td.income {
 td.expense {
     color: #e92929;
 }
+/* Modal */
+.modal-overlay{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
 
+}
+
+.modal-overlay.active{
+    opacity: 1;
+    visibility: visible;
+}
+.modal{
+    background: #141617;
+    padding: 2.4rem;
+    position: relative;
+    color: white;
+}
 /* FOOTER */
 footer{
     text-align: center;
     padding: 4rem 0 2rem;
-    color: var(--dark-blue);
+    color: white;
     opacity: 0.6;
+}
+
+/* Responsividade */
+
+@media (min-width: 800px) {
+        html{
+            font-size: 87.5% 
+        }
+
+        #balance{
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 2rem;
+        }
 }

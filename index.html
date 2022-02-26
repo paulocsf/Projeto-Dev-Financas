@@ -20,22 +20,27 @@
 
             <div class="card">
                 <h3>
-                    Entradas
-                    <span>
-                        
-                    </span>
+                   <span> Entradas </span>
+                    <img src="./assets/img/income.svg" alt="Imagem de Entradas">
                 </h3>
                 <p>R$5.0000,00</p>
     
             </div>
             <div class="card">
-                <h3>Saídas</h3>
+                <h3>
+                    <span> Saídas </span> 
+                    <img src="./assets/img/expense.svg" alt="Imagem de Saídas">
+
+                </h3>
                 <p>R$2.0000,00</p>
     
             </div>
         
             <div class="card total">
-                <h3>Total</h3>
+                <h3>
+                    <span>Total</span>
+                    <img src="./assets/img/total.svg" alt="Imagem de Total"> 
+                </h3>
                 <p>R$3.0000,00</p>
             </div>
 
@@ -43,14 +48,15 @@
 
         <section id="transaction">
             
-            <h2>Transações</h2>
+            <h2 class="sr-only">Transações</h2>
+            <a href="#" class="button new">+ Nova Transação</a>
             <table id="data-table">
                 <thead>
                     <tr>
                         <th>Descrição</th>
                         <th>Valor</th>
                         <th>Data</th>
-
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -58,24 +64,39 @@
                         <td class="description">luz</td>
                         <td class="expense" >-R$500,00</td>
                         <td class="date">23/02/2021</td>
+                        <td><img src="./assets/img/minus.svg" alt="Remover transação" /></td>
                     </tr>
 
                     <tr>
                         <td class="description">Criação website</td>
                         <td class="income"> R$5000,00</td>
                         <td class="date">23/02/2021</td>
+                        <td><img src="./assets/img/minus.svg" alt="Remover transação" /></td>
                     </tr>
 
                     <tr>
                         <td class="description">Internet</td>
                         <td class="expense">-R$200,00</td>
                         <td class="date">23/02/2021</td>
+                        <td><img src="./assets/img/minus.svg" alt="Remover transação" /></td>
                     </tr>
                 </tbody>
             </table>
         </section>
     </main>
-   
+    
+
+    <div class="modal-overlay active">
+        <div class="modal">
+            <div id="form">
+                <h2>Nova Transação</h2>
+                <form action="">
+                    
+                </form>
+            </div>
+            
+        </div>
+    </div>
         <footer>
             Feito por Paulo César
         </footer>
