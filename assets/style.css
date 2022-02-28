@@ -101,7 +101,7 @@ cursor: pointer;
 
 /* HEADER */
 header {
-    background: var(--purple);
+    background: #E134B9;
     padding: 2rem 0 10rem;
     text-align: center;
 }
